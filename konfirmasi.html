@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="Assets/CSS/styles2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Reset Password</h2>
+      <p>Masukkan password baru Anda dan konfirmasi.</p>
+      <form action="/reset-password" method="POST">
+        <div class="input-group">
+          <label for="new-password">Password Baru:</label>
+          <input
+            type="password"
+            id="new-password"
+            name="new-password"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="confirm-password">Konfirmasi Password:</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+          />
+        </div>
+        <a href="login.html">
+        <input type="button" value="Kirim" class="inputbutton" />
+        </a>
+      </form>
+    </div>
+  </body>
+</html>
