@@ -18,6 +18,15 @@ body {
   text-align: center;
 }
 
+.custom-container {
+  background-color: #ffffff;
+  padding: 0px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 95%;
+}
+
 .logo {
   width: 100px;
   margin-bottom: 20px;
