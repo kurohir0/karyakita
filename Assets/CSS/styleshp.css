@@ -1,0 +1,189 @@
+body{
+  /* background: url("../Image/bg.png") no-repeat center center fixed; */
+  background-size: cover;
+}
+h1 {
+  text-decoration: none;
+  font-size: 4em;
+  text-align: center;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body,p {
+  font-size: 1em;
+  font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+  height: 0%;
+  padding: 0px;
+  text-align:justify;
+  margin: 0px;
+  
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 2px;
+  display: flex;
+  justify-content:space-around;
+  
+
+}
+nav il {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border:none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+h2 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+h3 {
+  text-align: justify;
+  font-size: 1em;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 0;
+  margin: 0px;
+}
+.containerproject {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.columnproject {
+  flex: 1 1 30%;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 8px;
+}
+.columnproject a:nth-child(1){
+  color: black;
+}
+
+.columnproject a:hover{
+  color: black;
+}
+.columnproject img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.columnproject h3 {
+  margin: 15px 0 10px;
+  font-size: 1.5em;
+  color: black;
+}
+
+.columnproject a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.columnproject a:hover {
+  color: #007BFF;
+}
+
+.columnproject p {
+  margin: 0;
+  font-size: 1em;
+  color: #000000;
+}
+
+.columna {
+  margin-bottom: 15px;
+}
+
+.columna h3{
+  margin: 0;
+  flex: 1 1 30%;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.column {
+  margin: 10px;
+}
+
+.column h3{
+  margin: 0;
+  flex: 1 1 30%;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.column p{
+  margin: 0;
+  flex: 1 1 30%;
+  flex-wrap: wrap;
+  padding: 10px;
+  text-align: left;
+}
+
+.container{
+  text-align: center;
+  padding: 20px;
+} 
+
+.container p h3{
+  text-align: center;
+}
+
+.containera1{
+  text-align: left;
+  padding: 20px;
+} 
+.containera1 h1{
+  text-align: left;
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+}
+
+.barcontainer nav {
+  border: 1px solid black;
+  background-blend-mode: color;
+  text-align: center;
+  text-decoration: none;
+  font-size: medium;
+  color: red;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background-color: red;
+}
+
+a:nth-child(1){
+  color: white;
+}
+
+a:hover{
+  color: black;
+  background-color: white;
+}
+
+.buttondaftar {
+  padding-left: 20px;
+}
+
+.containerfooter{
+  text-align: center;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+} 
