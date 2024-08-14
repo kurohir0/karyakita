@@ -24,33 +24,36 @@
 		</a>
 		<ul class="side-menu top">
 			<li>
-				<a href="#">
+				<a href="dashboardadminprofile.html">
 					<i class='bx bxs-dashboard'></i>
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="dashboardadminsubmit.html">
 					<i class='bx bxs-doughnut-chart'></i>
 					<span class="text">Submission</span>
 				</a>
 			</li>
-			<ul class="side-menu">
-				<li class="active">
-					<a href="dashboardsetting.html">
-						<i class='bx bxs-cog'></i>
-						<span class="text">Pengaturan</span>
-					</a>
-				</li>
-				<li>
-					<a href="login.html" class="logout">
-						<i class='bx bxs-log-out-circle'></i>
-						<span class="text">Keluar</span>
-					</a>
-				</li>
-			</ul>
+
+		</ul>
+		<ul class="side-menu">
+			<li class="active">
+				<a href="dashboardadminsetting.html">
+					<i class='bx bxs-cog'></i>
+					<span class="text">Pengaturan</span>
+				</a>
+			</li>
+			<li>
+				<a href="login.html" class="logout">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">Keluar</span>
+				</a>
+			</li>
+		</ul>
 	</section>
 	<!-- SIDEBAR -->
+
 
 	<!-- CONTENT -->
 	<section id="content">
@@ -95,30 +98,48 @@
 					</div>
 					<div class="settings-group">
 						<div class="settings-item">
-							<i class="bx bx-user"></i> Nama Pengguna
-							<div class="input-group">
-								<input type="text" value="Shirakami Fubuki" style="font-family: var(--poppins);">
+							<i class="bx bx-user"></i>
+							<label for="username">Nama Pengguna</label>
+							<div>
+								<input type="text" id="username" value="" style="font-family: var(--poppins);">
 							</div>
 						</div>
+						<br>
 						<div class="settings-item">
-							<i class="bx bx-lock"></i> Sandi
-							<div class="input-group">
-								<input type="password" value="fbking" style="font-family: var(--poppins);">
+							<i class="bx bx-lock"></i>
+							<label for="password">Sandi</label>
+							<div>
+								<input type="password" id="password" value="" style="font-family: var(--poppins);">
 							</div>
 						</div>
+						<br>
 						<div class="settings-item">
-							<i class="bx bx-envelope"></i> Alamat Surel/E-mail
-							<div class="input-group">
-								<input type="email" value="fbking@gmail.com" style="font-family: var(--poppins);">
+							<i class="bx bx-envelope"></i>
+							<label for="email">Alamat Surel/E-mail</label>
+							<div>
+								<input type="email" id="email" value="" style="font-family: var(--poppins);">
 							</div>
 						</div>
+						<br>
 						<div class="settings-item">
-							<i class="bx bx-phone"></i> Nomor Telepon
-							<div class="input-group">
-								<input type="tel" value="08342034139" style="font-family: var(--poppins);">
+							<i class="bx bx-phone"></i>
+							<label for="phone">Nomor Telepon</label>
+							<div>
+								<input type="tel" id="phone" value="" style="font-family: var(--poppins);">
 							</div>
 						</div>
-					</div>
+						<br>
+						<div class="settings-item">
+							<i class="bx bx-image"></i>
+							<label for="avatar">Upload Avatar</label>
+							<div>
+								<input type="file" id="avatar" accept="image/*">
+								<div id="avatar-preview-container" style="margin-top: 10px;">
+									<img id="avatar-preview" src="" alt="Avatar Preview" style="display: none; width: 100px; height: 100px; object-fit: cover; border-radius: 50%;">
+								</div>
+							</div>
+						</div>
+					</div>					
 				</div>
 			</div>
 			<div class="save-button-container">
@@ -131,7 +152,33 @@
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
-
+	<script>
+		// Mendapatkan elemen input dan preview
+		const avatarInput = document.getElementById('avatar');
+		const avatarPreview = document.getElementById('avatar-preview');
+	
+		// Event listener untuk mengubah avatar
+		avatarInput.addEventListener('change', function() {
+			const file = avatarInput.files[0];
+	
+			// Pastikan file terpilih dan itu adalah gambar
+			if (file && file.type.startsWith('image/')) {
+				const reader = new FileReader();
+	
+				// Ketika file selesai dibaca, tampilkan preview
+				reader.onload = function(e) {
+					avatarPreview.src = e.target.result;
+					avatarPreview.style.display = 'block';
+				};
+	
+				// Membaca file sebagai URL data
+				reader.readAsDataURL(file);
+			} else {
+				avatarPreview.style.display = 'none';
+				avatarPreview.src = '';
+			}
+		});
+	</script>
 	<script src="Assets/JS/dashboard.js"></script>
 </body>
 

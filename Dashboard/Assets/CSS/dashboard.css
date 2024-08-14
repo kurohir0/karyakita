@@ -745,18 +745,68 @@ body {
     }
 }
 
-.settings-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Seimbangkan ikon dan input */
-    padding: 1rem 0; /* Tambahkan padding untuk memberi lebih banyak ruang */
-}
-
-.input-group input {
-    padding: 0.75rem; /* Menambahkan padding dalam input untuk lebih banyak ruang */
-    border-radius: 4px;
-}
-
 .settings-group {
-    gap: 1rem; /* Jarak antar elemen untuk menghindari tampilan sempit */
+    display: table;
+    width: 100%;
+    margin-top: 20px; /* Tambahkan jarak atas jika perlu */
+}
+
+.settings-item {
+    display: table-row;
+    margin-bottom: 15px; /* Tambahkan jarak antar elemen */
+}
+
+.settings-item i {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 15px; /* Tambahkan jarak antara ikon dan teks */
+    font-size: 1.5rem; /* Atur ukuran ikon */
+}
+
+.settings-item label {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 5px; /* Tambahkan jarak antara teks keterangan dan input */
+    font-weight: bold;
+    font-family: var(--poppins);
+}
+
+.settings-item input {
+    display: table-cell;
+    width: 100%;
+    padding: 8px 50px; /* Kurangi padding untuk mengurangi tinggi input */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.settings-item > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.save-button-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.save-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dashboard-logo {
+    width: 50px; /* Ubah ukuran sesuai keinginan */
+    height: 50px; /* Ubah ukuran sesuai keinginan */
+    object-fit: cover; /* Agar gambar tetap proporsional dalam lingkaran */
+	margin-top: 25px;
+	margin-right: 10px;
+}
+
+.textshowcase {
+	margin-top: 28px;
 }

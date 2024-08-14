@@ -77,6 +77,7 @@ window.onclick = function(event) {
 	}
 }
 
+
 // Handle form submission
 document.getElementById('submissionForm').addEventListener('submit', function(e) {
 	e.preventDefault();
