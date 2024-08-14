@@ -52,7 +52,7 @@ body {
 
 /* SIDEBAR */
 #sidebar {
-	position: fixed;
+	position:fixed;
 	top: 0;
 	left: 0;
 	width: 280px;
@@ -97,7 +97,7 @@ body {
 #sidebar .side-menu li {
 	height: 48px;
 	background: transparent;
-	margin-left: 6px;
+	margin-left: 5px;
 	border-radius: 48px 0 0 48px;
 	padding: 4px;
 }
@@ -810,3 +810,69 @@ body {
 .textshowcase {
 	margin-top: 28px;
 }
+
+.profile-picture {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.profile-info {
+	align-items: center;
+	margin-top: 20px;
+	background-color: white;
+}
+
+.profile-info {
+    display: flex; /* Menggunakan Flexbox untuk menata elemen secara horizontal */
+    align-items: flex-start; /* Menyelaraskan item-item di atas */
+    gap: 20px; /* Jarak antara gambar profil dan daftar */
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+	margin-left: 15px;
+	margin-top: 50px;
+}
+
+.details {
+    display: flex; /* Menampilkan <ul> secara horizontal */
+    flex-direction: column; /* Mengatur item secara vertikal */
+}
+
+.details li {
+    display: flex; /* Menampilkan <li> secara horizontal */
+    align-items: center; /* Menyelaraskan elemen anak secara vertikal */
+    margin-bottom: 10px; /* Jarak antar item daftar */
+}
+
+.details li i {
+    font-size: 24px; /* Ukuran ikon */
+    margin-right: 10px; /* Jarak antara ikon dan teks */
+	margin-top: 25px;
+}
+
+.details li p {
+    margin: 0; /* Menghapus margin default dari p */
+    font-weight: bold; /* Menebalkan teks */
+    margin-right: 10px; /* Jarak antara teks dan span */
+    width: 200px; /* Lebar konsisten untuk p */
+    text-align: justify; /* Menyelaraskan teks di sebelah kanan */
+	margin-top: 25px;
+}
+
+.details li span {
+    background-color: #f0f0f0; /* Warna latar belakang */
+    color: #333; /* Warna teks */
+    border: 1px solid #ccc; /* Border dengan warna dan ketebalan */
+    padding: 15px 200px; /* Ruang di dalam border */
+    min-width: 100px; /* Lebar minimum untuk span */
+    text-align: center; /* Menyelaraskan teks di tengah span */
+	margin-top: 25px;
+}
+
+
