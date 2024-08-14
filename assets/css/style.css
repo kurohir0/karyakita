@@ -1,160 +1,177 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
 }
 
 .nav-link {
     color: #fff;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
 
 .nav-link:hover {
-    color: #8bb9fe;
+    color: #f8f9fa;
+    background-color: transparent;
 }
 
 .card-img-top {
-    border-radius: 20px;
-    padding: 15px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .card-body {
-    padding: 15px;
-    margin-top: -15px;
+  padding: 15px;
+  margin-top: -15px;
 }
 
 .card {
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .author {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .card-body .d-flex {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .checked {
-    color: orange;
+  color: orange;
 }
 
 .btn {
-    min-height: 40px;
-    min-width: 85px;
-    font-size: 14px;
+  min-height: 40px;
+  min-width: 85px;
+  font-size: 14px;
 }
 
 .main-section {
-    background-color: #F5F7FA;
+  background-color: #f5f7fa;
 }
 
 .main-section .text-content h1 {
-    font-weight: bold;
-    color: #4d4d4d;
+  font-weight: bold;
+  color: #4d4d4d;
 }
 
 .main-section .text-content p {
-    font-weight: 400;
-    color: #717171;
+  font-weight: 400;
+  color: #717171;
 }
 
 .main-section .text-content ul {
-    font-weight: 400;
-    color: #717171;
-    list-style-type: none;
+  font-weight: 400;
+  color: #717171;
+  list-style-type: none;
 }
 
 .hero-section {
-    background-color: #F5F7FA;
+  background-color: #f5f7fa;
 }
 
 .hero-section .text-content h1 {
-    font-weight: bold;
-    color: #4d4d4d;
+  font-weight: bold;
+  color: #4d4d4d;
 }
 
 .hero-section .text-content p {
-    font-weight: 400;
-    color: #717171;
+  font-weight: 400;
+  color: #717171;
 }
 
 .hero-section button {
-    min-height: 40px;
-    min-width: 85px;
-    font-size: 14px;
+  min-height: 40px;
+  min-width: 85px;
+  font-size: 14px;
 }
 
 .userlist-section .text-content h1 {
-    font-weight: bold;
-    color: #4d4d4d;
+  font-weight: bold;
+  color: #4d4d4d;
 }
 
 .userlist-section .text-content p {
-    font-weight: 400;
-    color: #717171;
+  font-weight: 400;
+  color: #717171;
 }
 
 .userlist-section .text-content ul {
-    font-weight: 400;
-    color: #717171;
-    list-style-type: none;
+  font-weight: 400;
+  color: #717171;
+  list-style-type: none;
 }
 
 .userlist-section button {
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
 }
 
 .userlist-section button.edit:hover {
-    background-color: #0b5ed7;
-    color: #fff;
+  background-color: #0b5ed7;
+  color: #fff;
 }
 
 .userlist-section button.edit {
-    background-color: #0d6efd;
-    color: #fff;
+  background-color: #0d6efd;
+  color: #fff;
 }
 
 .userlist-section button.delete:hover {
-    background-color: #bb2d3b;
-    color: #fff;
+  background-color: #bb2d3b;
+  color: #fff;
 }
 
 .userlist-section button.delete {
-    background-color: #dc3545;
-    color: #fff;
+  background-color: #dc3545;
+  color: #fff;
 }
 
 .footer-content .text-content p {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .copyright {
-    background-color: #263238;
+  background-color: #263238;
 }
 
 #myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: red;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
 }
 
 #myBtn:hover {
-    background-color: #8bb9fe;
+  background-color: #8bb9fe;
+}
+
+.gallery-image {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+.modal-body img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
