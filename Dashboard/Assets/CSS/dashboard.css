@@ -700,7 +700,6 @@ body {
 
 /* Style for the button */
 .btn {
-	background-color: #007bff;
 	color: white;
 	border: none;
 	padding: 10px 20px;
@@ -809,6 +808,7 @@ body {
 
 .textshowcase {
 	margin-top: 28px;
+	color: var(--dark);
 }
 
 .profile-picture {
@@ -866,13 +866,11 @@ body {
 }
 
 .details li span {
-    background-color: #f0f0f0; /* Warna latar belakang */
     color: #333; /* Warna teks */
+	border-radius: 10px;
     border: 1px solid #ccc; /* Border dengan warna dan ketebalan */
     padding: 15px 200px; /* Ruang di dalam border */
     min-width: 100px; /* Lebar minimum untuk span */
     text-align: center; /* Menyelaraskan teks di tengah span */
 	margin-top: 25px;
 }
-
-
