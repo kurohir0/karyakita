@@ -867,7 +867,7 @@ body {
 
 .details li span {
     color: #333; /* Warna teks */
-	border-radius: 10px;
+	border-radius: 5px;
     border: 1px solid #ccc; /* Border dengan warna dan ketebalan */
     padding: 15px 200px; /* Ruang di dalam border */
     min-width: 100px; /* Lebar minimum untuk span */
