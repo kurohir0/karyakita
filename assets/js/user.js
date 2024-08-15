@@ -5,6 +5,11 @@ function registerUser() {
     const password = document.getElementById('regPassword').value;
     const confirm_password = document.getElementById('regConfirm_password').value;
 
+    if (!username || !email || !password || !confirm_password) {
+        alert('Semua field harus diisi!');
+        return;
+    }
+
     if (password !== confirm_password) {
         alert('Password dan Konfirmasi Password tidak cocok!');
         return;
@@ -28,6 +33,11 @@ function loginUser() {
     const username = document.getElementById('logUsername').value;
     const password = document.getElementById('logPassword').value;
 
+    if (!username || !password) {
+        alert('Username dan Password harus diisi!');
+        return;
+    }
+
     const storedUser = localStorage.getItem(username);
 
     if (storedUser) {
@@ -48,7 +58,7 @@ function loginUser() {
 function logoutUser() {
     localStorage.removeItem('loggedInUser'); // Hapus data sesi pengguna yang sedang login
     alert('Anda telah logout.');
-    window.location.href = 'login.html'; // Redirect ke halaman login setelah logout
+    window.location.href = '/assets/pages/login.html'; // Redirect ke halaman login setelah logout
 }
 
 // Fungsi untuk menampilkan greeting di halaman Dashboard
@@ -58,7 +68,7 @@ function displayGreeting() {
         const greetingElement = document.getElementById('greeting');
         greetingElement.textContent = `Selamat datang, ${loggedInUser}!`;
     } else {
-        window.location.href = 'login.html'; // Redirect ke halaman login jika tidak ada pengguna yang login
+        window.location.href = '/assets/pages/login.html'; // Redirect ke halaman login jika tidak ada pengguna yang login
     }
 }
 

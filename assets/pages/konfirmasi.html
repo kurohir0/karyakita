@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Baru - Karya Kita</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Style -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/e1687eca8d.js" crossorigin="anonymous"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Modal Section -->
+    <section class="modal-section">
+        <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1"
+            role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-4 shadow">
+                    <div class="logo text-center p-5 pb-4 border-bottom-0">
+                        <img src="/assets/Image/logo.png" alt="Logo" />
+                        <h1 class="fw-bold mt-2 mb-0 fs-2">Password Baru</h1>
+                    </div>
+                    <div class="modal-body p-4 pt-0">
+                        <p class="mb-4">Masukkan password baru anda</p>
+                        <form id="resetPasswordForm">
+                            <div class="form-floating mb-3">
+                                <input type="password" id="newPassword" name="password" class="form-control rounded-3"
+                                    placeholder="Password" required />
+                                <label for="newPassword">Password</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" id="confirmPassword" name="confirm_password"
+                                    class="form-control rounded-3" placeholder="Konfirmasi Password" required />
+                                <label for="confirmPassword">Konfirmasi Password</label>
+                            </div>
+                            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">
+                                Kirim
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Javascript -->
+    <script>
+        document.getElementById('resetPasswordForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Ambil parameter email dari URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const email = urlParams.get('email');
+
+            // Ambil password dari form
+            const password = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Validasi password
+            if (password === confirmPassword) {
+                updatePassword(email, password);
+            } else {
+                alert('Password dan Konfirmasi Password tidak cocok!');
+            }
+        });
+
+        function updatePassword(email, newPassword) {
+            const users = Object.keys(localStorage);
+            let userFound = false;
+
+            users.forEach(username => {
+                try {
+                    const user = JSON.parse(localStorage.getItem(username));
+                    if (user.email === email) {
+                        user.password = newPassword;
+                        localStorage.setItem(username, JSON.stringify(user));
+                        alert('Password berhasil diubah!');
+                        window.location.href =
+                            '/assets/pages/login.html'; // Redirect ke halaman login setelah reset password
+                        userFound = true;
+                    }
+                } catch (error) {
+                    console.error('Gagal menguraikan data JSON:', error);
+                }
+            });
+
+            if (!userFound) {
+                alert('Email tidak ditemukan!');
+            }
+        }
+    </script>
+</body>
+
+</html>
