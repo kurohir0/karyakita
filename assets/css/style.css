@@ -6,6 +6,11 @@
     font-weight: 500;
 }
 
+.ml3 {
+    font-weight: 900;
+    font-size: 3.5em;
+}
+
 .nav-link {
     color: #fff;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
@@ -26,6 +31,7 @@
 }
 
 .card {
+    flex-direction: column;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
@@ -39,11 +45,17 @@
     justify-content: space-between;
 }
 
-.checked {
-    color: orange;
+.fa-star {
+    font-size: 1.5em;
+    color: #ddd;
+    cursor: pointer;
 }
 
-.btn {
+.fa-star.checked {
+    color: gold;
+}
+
+.navbar-section .btn {
     min-height: 40px;
     min-width: 85px;
     font-size: 14px;
@@ -67,10 +79,24 @@
     font-weight: 400;
     color: #717171;
     list-style-type: none;
+    padding: 0;
 }
 
 .hero-section {
     background-color: #F5F7FA;
+}
+
+.hero-section img {
+    animation: moveUpDown 5s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px); /* Atur jarak gerakan naik turun sesuai kebutuhan */
+    }
 }
 
 .hero-section .text-content h1 {
